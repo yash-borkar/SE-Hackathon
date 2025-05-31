@@ -1,4 +1,4 @@
-# ShopEase AI Customer Support Chatbot 🛍️
+# Customer Support Chatbot 🛍️
 
 A modern, AI-powered customer support chatbot for e-commerce platforms built with Streamlit and Groq AI. This intelligent assistant helps customers with order tracking, product information, returns, refunds, and more.
 
@@ -8,7 +8,6 @@ A modern, AI-powered customer support chatbot for e-commerce platforms built wit
 - **Order Tracking** - Real-time order status and tracking information
 - **Product Recommendations** - Smart product suggestions with ratings and reviews
 - **Voice Features** - Text-to-speech responses for accessibility
-- **Quick Actions** - Contextual buttons for faster interactions
 - **Streaming Responses** - Real-time AI response generation
 - **Interactive UI** - Modern gradient design with smooth animations
 - **Smart Context Memory** - Maintains conversation context across interactions
@@ -23,8 +22,7 @@ A modern, AI-powered customer support chatbot for e-commerce platforms built wit
 ### 1. Clone the Repository
 ```bash
 git clone <your-repository-url>
-cd ecommerce-chatbot
-```
+cd FlipkartChatbot
 ```
 
 ### 3. Install Dependencies
@@ -48,6 +46,7 @@ Ensure the following data files are present in the [`data/`](ecommerce-chatbot/d
 ### Start the Streamlit App
 ```bash
 streamlit run app.py
+python chatbot.py
 ```
 
 The application will open in your default browser at `http://localhost:8501`
@@ -61,11 +60,12 @@ streamlit run app.py --server.port 8502
 
 ```
 ecommerce-chatbot/
-├── app.py                 # Main Streamlit application
-├── config.py             # Configuration settings
-├── prompts.py            # AI prompts and templates
-├── requirements.txt      # Python dependencies
-├── .env                  # Environment variables (API keys)
+├── app.py               # Streamlit application
+├── chatbot.py.py        # Main file that renders HTML
+├── config.py            # Configuration settings
+├── prompts.py           # AI prompts and templates
+├── requirements.txt     # Python dependencies
+├── .env                 # Environment variables (API keys)
 ├── .gitignore           # Git ignore rules
 ├── data/
 │   ├── products.json    # Product catalog data
@@ -94,46 +94,6 @@ Edit [`prompts.py`](ecommerce-chatbot/prompts.py) to customize:
 - Language-specific responses
 - Quick action templates
 
-## 🧪 Testing the Chatbot
-
-### Sample Test Queries
-Try these example queries to test functionality:
-
-**Order Tracking:**
-- "What is the status of order ORD12345?"
-- "मेरा ऑर्डर ORD12346 कहाँ है?" (Hindi)
-
-**Product Information:**
-- "Tell me about the Smartwatch Pro X"
-- "Show me electronics products"
-- "Which products have the best ratings?"
-
-**Returns & Refunds:**
-- "How do I return the Bluetooth headphones?"
-- "What's the refund status for order ORD12348?"
-
-**General Support:**
-- "What payment methods do you accept?"
-- "Can I change my delivery address?"
-
-### Testing Features
-1. **Voice Features** - Toggle voice input checkbox
-2. **Quick Actions** - Use sidebar buttons for common queries
-3. **Multi-language** - Switch between English and Hindi inputs
-4. **Streaming** - Watch responses generate in real-time
-
-## 🛠️ Troubleshooting
-
-### Performance Tips
-- The app caches product and order data for better performance
-- Clear cache in Streamlit if data files are updated
-- Use Ctrl+C to stop the development server
-
-## 🔒 Security Notes
-
-- Keep your [`.env`](ecommerce-chatbot/.env) file secure and never commit it to version control
-- The [`.gitignore`](ecommerce-chatbot/.gitignore) file already excludes `.env` and `__pycache__/`
-- Rotate your Groq API key periodically for security
 
 ## 📊 Data Management
 
@@ -167,14 +127,6 @@ Edit [`data/orders.json`](ecommerce-chatbot/data/orders.json) with similar struc
 ## 📝 License
 
 This project is for educational/demonstration purposes. Please ensure compliance with your organization's policies before commercial use.
-
-## 🆘 Support
-
-If you encounter issues:
-1. Check the troubleshooting section above
-2. Verify all dependencies are installed correctly
-3. Ensure your Groq API key is valid and has sufficient credits
-4. Check the console output for detailed error messages
 
 ---
 
